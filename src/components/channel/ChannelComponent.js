@@ -54,6 +54,7 @@ export default class ChannelComponent extends Component {
                     channelId={channelConfig}
                     path={channel}
                 />
+                CheldrenApi
             </div>
         );
     }
