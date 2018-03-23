@@ -1,0 +1,15 @@
+{
+    "plugins": [
+      ["module-resolver", {
+        "root": ["."],
+        "alias": {
+          "react": "preact-compat",
+          "react-dom": "preact-compat",
+          "create-react-class": "preact-compat/lib/create-react-class"
+        }
+      }]
+    ],
+    "presets": [ 
+        ["preact-cli/babel", { "modules": "commonjs" }]
+    ]
+}
