@@ -18,14 +18,12 @@ export default class ChannelComponent extends Component {
     componentDidMount() {
         const req = axios.get('https://api.airtable.com/v0/appOB5mr27kviHhs1/Table%201?api_key=key9vUtCwtJJiUzrp');
         const req2 = axios.get('https://api.airtable.com/v0/appOB5mr27kviHhs1/Table%202?api_key=key9vUtCwtJJiUzrp');
-        const req3 = axios.get('https://api.airtable.com/v0/appOB5mr27kviHhs1/Table%203?api_key=key9vUtCwtJJiUzrp');
-        Promise.all([req, req2, req3])
-            .then( ([response,response2, response3]) => {
+        Promise.all([req, req2])
+            .then( ([response,response2 ]) => {
                 this.setState( prevState => ({
                             data: [
                                 response.data.records,
                                 response2.data.records,
-                                response3.data.records
                             ]
                         }
                     )

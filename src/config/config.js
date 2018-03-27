@@ -12,11 +12,6 @@ export const airbase = {
             id: 2,
             name: "Table%202",
             viewId: "Grid%20view"
-        },
-        {
-            id: 3,
-            name: "Table%203",
-            viewId: "Grid%20view"
         }
     ],
 };
@@ -28,4 +23,4 @@ export const methods ={
             return table.id;
         })
     }
-}
+};

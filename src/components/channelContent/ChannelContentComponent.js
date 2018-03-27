@@ -43,8 +43,18 @@ export default class ChannelContentComponent extends Component {
         })
     }
 
+    nextButton() {
+        if (this.props.channel >= 1 && this.props.channel <= 1) {
+            return +this.props.channel +1
+        } else if (this.props.channel = 2) {
+            return +this.props.channel -1
+            //TODO цикл по каналам ( узнать их кол-во ) и отминусовать у последнего и минус 1
+        } else {
+            return +this.props.channel
+        }
+    }
+
     volumeButton(steps) {
-        console.log(this.state.volume);
         const volume = this.state.volume;
         this.setState({
             volume: volume + steps
@@ -54,14 +64,6 @@ export default class ChannelContentComponent extends Component {
     prevButton() {
         if (this.props.channel > 1) {
             return +this.props.channel -1
-        } else {
-            return +this.props.channel
-        }
-    }
-
-    nextButton() {
-        if (this.props.channel >= 1 && this.props.channel <= 2) {
-            return +this.props.channel +1
         } else {
             return +this.props.channel
         }
@@ -98,10 +100,6 @@ export default class ChannelContentComponent extends Component {
                 <button onClick={() => this.volumeButton(-0.1)}>Volume -</button>
                 <a href={url + this.prevButton()}>Пред. Видео</a>
                 <a href={url + this.nextButton()}>След. Видео</a>
-
-
-
-
             </div>
         );
     }
