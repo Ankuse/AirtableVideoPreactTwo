@@ -11,7 +11,7 @@ export default class ChannelListComponent extends Component {
                 { channelId && channelId.map(table => (
                     <li key={table}>
                         <ChannelItem value={table}
-                                     href={url + table}
+                                     href={url + Number (table +1)}
                                      path={this.props.path}
                                      length={airbase.tables.length}
                         />

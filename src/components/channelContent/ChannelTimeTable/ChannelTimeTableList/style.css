@@ -1,0 +1,4 @@
+.ulChild {
+    display: flex;
+    flex-direction: column;
+}

@@ -4,13 +4,18 @@ export const airbase = {
     maxRecords: 20,
     tables: [
         {
-            id: 1,
+            id: 0,
             name: "Table%201",
             viewId: "Grid%20view"
         },
         {
-            id: 2,
+            id: 1,
             name: "Table%202",
+            viewId: "Grid%20view"
+        },
+        {
+            id: 2,
+            name: "Table%203",
             viewId: "Grid%20view"
         }
     ],
