@@ -6,6 +6,7 @@ import Home from '../routes/home';
 import ChannelComponent from './channel/ChannelComponent';
 import style from './style.css';
 import Redirect from "../routes/redirect/Redirect";
+import axios from 'axios';
 
 //import Profile from '../routes/profile';
 // import Home from 'async!../routes/home';
@@ -30,8 +31,9 @@ export default class App extends Component {
 			<div id="app" class={style.all}>
 				<Header />
                 <Router onChange={this.handleRoute}>
-                    <ChannelComponent path="/ch/:channel"/>
-                    <Redirect path="/" to="/ch/1" />
+                    <ChannelComponent path="ch/:channel/:slug?"
+                    />
+                    <Redirect path="/" to="ch/1/" />
                 </Router>
 			</div>
 		);

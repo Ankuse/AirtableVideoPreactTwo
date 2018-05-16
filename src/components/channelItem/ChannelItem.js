@@ -1,8 +1,7 @@
-export const ChannelItem = ({href, value, clickChannel, clickChannelIndex}) => {
+export const ChannelItem = ({href, value}) => {
     return (
         <a href={href}
            name={value}
-           onClick={() => clickChannel(clickChannelIndex)}
         >
             {value + Number(1)}
         </a>
